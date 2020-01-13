@@ -20,3 +20,10 @@ composer create-projet symfony/website-skeleton salutem
 ```
 
 Éventuellement modifier le fichier .gitignore
+
+### Installer webPack Encore
+
+```
+ composer require symfony/webpack-encore-bundle
+npm install
+```
