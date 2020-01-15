@@ -198,6 +198,6 @@ class Appointment
      */
     public function prePersist()
     {
-        $this->setCreatedAt(new \DateTime(()));
+        $this->setCreatedAt(new \DateTime());
     }
 }
