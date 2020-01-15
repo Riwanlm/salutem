@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des docteurs{% endblock %}
+
+{% block body %}
+
+    <section class="container">
+        <h1>Liste des docteurs</h1>
+    </section>
+
+    <section class="doctors">
+        <div class="container">
+            {% for doctor in doctors %}
+                <article class="doctor-thumbnail">
+                    <img src="{{ asset('uploads/' ~ doctor.photo) }}" alt="{{ doctor.fullname }}">
+                    <div class="doctor-details">
+                        <h4>{{ doctor.fullname }}</h4>
+                        <p class="doctor-skills">
+                            {% for skill in doctor.skills %}
+                                <span>{{ skill.label }}</span>
+                            {% endfor %}
+                        </p>
+                        <a href="{{ path('doctor_show', {'id': doctor.id}) }}" class="btn btn-dark">
+                            <i class="fa fa-eye"></i>
+                            Plus d'informations
+                        </a>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock %}

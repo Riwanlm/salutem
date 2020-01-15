@@ -354,6 +354,11 @@ footer.main-footer table.opening-hours tr td.hours {
     margin-bottom: 0;
 }
 
+.doctors .doctor-details .doctor-skills > span:not(:last-child):after {
+    content: "/";
+    margin: 0 0.5em;
+}
+
 @media only screen and (max-width: 991px) {
     .container {
         width: 100%;
